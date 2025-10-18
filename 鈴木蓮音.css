@@ -1,0 +1,112 @@
+@charset "UTF-8";
+body {
+  /* ページの高さがコンテンツに関わらず100%になるように設定 */
+  min-height: 100vh;
+  /* 背景を固定し、スクロール時に動かないようにする */
+  background-attachment: fixed;
+  /* 宇宙の深い暗闇を表現する黒に近い色 */
+  background-color: #00000a;
+  /* 複数のグラデーションを重ねる */
+  background-image:
+    /* 紫色の星雲のようなグラデーション */
+    radial-gradient(circle at 75% 20%, #4a285d 0%, rgba(255,255,255,0) 25%),
+    /* 青色の惑星のようなグラデーション */
+    radial-gradient(circle at 25% 80%, #153472 0%, rgba(255,255,255,0) 25%),
+    /* ページの上下を暗くするリニアグラデーション */
+    linear-gradient(to bottom, #000015 0%, #000033 50%, #000015 100%);
+    /*フォントカラーの設定*/
+    color: #e0e0e0;
+  /* スマホ用の余白調整 */
+  padding: 0 8px;
+}
+h1{font-size: 20px;
+border: 5px solid #ffffff;
+border-radius: 24px;
+padding: 8px 0;
+margin: 22px auto;
+width: 320px;
+text-align: center;
+margin-bottom: 22px;
+}
+
+/* 画像・メッセージ・リンクを中央配置する親要素 */
+.center-content {
+  text-align: center;
+}
+
+/* 画像を中央配置 */
+img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* メッセージ（例: pタグ）を中央配置 */
+.message {
+  text-align: center;
+}
+
+/* リンクを中央配置 */
+a {
+  background-color: rgba(153, 244, 41, 0.5);
+  display: block;
+  padding: 20px 0;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 auto 22px auto;
+  width: 320px;
+  text-align: center;
+}
+
+ul{
+    width: 320px;
+    margin:0 auto;
+}
+li{
+    margin-bottom:22px;
+}
+
+h1, a, ul {
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 400px) {
+  h1, a, ul {
+    max-width: 100%;
+    font-size: 16px;
+  }
+  a {
+    padding: 14px 0;
+  }
+}
+
+/* 既存のメディアクエリを拡張 */
+@media (max-width: 600px) {
+  h1, a, ul {
+    max-width: 100%;
+    font-size: 16px;
+    width: 100%;
+  }
+  a {
+    padding: 14px 0;
+  }
+  body {
+    padding: 0 4px;
+  }
+}
+
+/* 鈴木蓮音.CSSをインポート */
+@import url("鈴木蓮音.CSS");
+
+/* 画像をレスポンシブ対応 */
+.profile-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
